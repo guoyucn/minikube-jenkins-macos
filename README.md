@@ -34,6 +34,7 @@ https://docs.docker.com/docker-for-mac/install/
 `https://coreos.com/tectonic/docs/latest/tutorials/kubernetes/configure-kubectl.html`  
 
 7. Build docker image containing Jenkins, kubectl and docker  
+`cd jenkins-image`  
 `docker build -t jenkins-minikube .`  
 
 8. Deploy jenkins-minikube to docker  
