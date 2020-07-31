@@ -19,17 +19,17 @@ https://docs.docker.com/docker-for-mac/install/
   ]`  
 3.4 Click Apply & Restart  
 
-4. Install Minikube and startup   
+4. Install minikube and startup   
 4.1 Follow instructions to install minikube  
 `https://kubernetes.io/docs/tasks/tools/install-minikube/`  
 4.2 Startup minikube  
 `minikube start --apiserver-name=host.docker.internal --insecure-registry=host.docker.internal:5000`  
 
-5. Download latest docker client (linux version) and replace docker in this repo  
+5. Download latest docker client (linux version) and replace `docker` file in this repo  
 `https://download.docker.com/linux/static/stable/x86_64/`  
 `https://docs.docker.com/engine/install/binaries/#install-daemon-and-client-binaries-on-linux`  
 
-6. Download kubectl client (linux version) and replace kubeclt in this repo  
+6. Download kubectl client (linux version) and replace `kubectl` file in this repo  
 `curl -O https://storage.googleapis.com/kubernetes-release/release/v1.8.4/bin/linux/amd64/kubectl`  
 `https://coreos.com/tectonic/docs/latest/tutorials/kubernetes/configure-kubectl.html`  
 
@@ -42,7 +42,7 @@ docker build -t jenkins-minikube .
 8.2 Run Jenkins application in docker. (replace <account> to your macbook username)  
 `docker run -d -u root -p 8080:8080 -p 50000:50000 -v jenkins_data:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock -v /Users/yuguo/.kube:/root/.kube -v /Users/<account>/.minikube:/Users/<account>/.minikube jenkins-minikube:latest`    
 
-9. Edit minikube config file (/Users/<account>/.kube/config)  
+9. Edit minikube config file (`/Users/<account>/.kube/config`)  
 change  
     `server: https://127.0.0.1:32792`  
 to  
