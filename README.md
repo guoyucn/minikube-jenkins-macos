@@ -33,8 +33,8 @@ https://docs.docker.com/docker-for-mac/install/
 `curl -O https://storage.googleapis.com/kubernetes-release/release/v1.8.4/bin/linux/amd64/kubectl`  
 `https://coreos.com/tectonic/docs/latest/tutorials/kubernetes/configure-kubectl.html`  
 
-7. Build docker image containing Jenkins, kubectl and docker
-docker build -t jenkins-minikube .  
+7. Build docker image containing Jenkins, kubectl and docker  
+`docker build -t jenkins-minikube .`  
 
 8. Deploy jenkins-minikube to docker  
 8.1 Create docker volume for jenkins  
@@ -50,9 +50,9 @@ to
 note: the port number could be different from above  
 
 10. Install and run docker local registry  
-10.1 Run docker registry
+10.1 Run docker registry  
 `docker run -d -p 5000:5000 --restart always --name registry registry:2`  
-10.2 Verify 
+10.2 Verify  
 `curl host.docker.internal:5000/v2/_catalog`  
 
 ## Setup your first Jenkins Job
