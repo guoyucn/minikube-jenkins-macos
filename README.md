@@ -40,7 +40,7 @@ https://docs.docker.com/docker-for-mac/install/
 8. Deploy jenkins-minikube to docker  
 8.1 Create docker volume for jenkins  
 `docker volume create jenkins`  
-8.2 Run Jenkins application in docker. (replace <account> to your macbook username)  
+8.2 Run Jenkins application in docker. (replace `<account>` to your macbook username)  
 `docker run -d -u root -p 8080:8080 -p 50000:50000 -v jenkins_data:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock -v /Users/yuguo/.kube:/root/.kube -v /Users/<account>/.minikube:/Users/<account>/.minikube jenkins-minikube:latest`    
 
 9. Edit minikube config file (`/Users/<account>/.kube/config`)  
@@ -57,14 +57,14 @@ note: the port number could be different from above
 `curl host.docker.internal:5000/v2/_catalog`  
 
 ## Setup your first Jenkins Job
-1. Setup Jenkins 
-1.1 Open http://localhost:8080 
-1.2 Follow instruction to login Jenkins
-1.3 Install `Git client` and `Pipeline: Job` plugin 
+1. Setup Jenkins  
+1.1 Open http://localhost:8080  
+1.2 Follow instruction to login Jenkins  
+1.3 Install `Git client` and `Pipeline: Job` plugin  
 
-2. Create jenkins job
-2.1 Create new Pipeline with name `Hello-Go`
-2.2 Under Pipeline section, fillin below script and Save
+2. Create jenkins job  
+2.1 Create new Pipeline with name `Hello-Go`  
+2.2 Under Pipeline section, fillin below script and Save  
 ```
 pipeline {
     agent any
@@ -96,5 +96,5 @@ pipeline {
 3. Click `Build Now` to build the Pipeline
 
 ## Verify 
-1. Run minikube service hello-go
-2. Browser will be opened with content `Hello World` 
+1. Run minikube service hello-go  
+2. Browser will be opened with content `Hello World`  
