@@ -96,5 +96,5 @@ pipeline {
 3. Click `Build Now` to build the Pipeline
 
 ## Verify 
-1. Run minikube service hello-go  
+1. Run `minikube service hello-go`  
 2. Browser will be opened with content `Hello World`  
