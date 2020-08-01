@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	http.HandleFunc("/hello", sayhelloName)
+	http.HandleFunc("/", sayhelloName)
 	log.Fatal(http.ListenAndServe(":8081", nil))
 }
 func sayhelloName(w http.ResponseWriter, r *http.Request) {

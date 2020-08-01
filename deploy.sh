@@ -1,3 +1,4 @@
+#!/bin/sh
 docker build -t hello-builder --target builder .
 docker build -t host.docker.internal:5000/hello-final:1.0.0 --target final .
 docker push host.docker.internal:5000/hello-final:1.0.0
